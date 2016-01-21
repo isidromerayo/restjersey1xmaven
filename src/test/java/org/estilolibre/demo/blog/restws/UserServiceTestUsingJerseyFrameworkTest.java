@@ -21,7 +21,7 @@ import com.sun.jersey.test.framework.WebAppDescriptor;
  * @author isidromerayo
  *
  */
-public class UserServiceTestUsingJerseyTestFramework extends JerseyTest {
+public class UserServiceTestUsingJerseyFrameworkTest extends JerseyTest {
 	private static final String LITERAL_URI_USER_INFO_SERVICE = "/RestJersey/rest/UserInfoService/";
 
 	@Override
