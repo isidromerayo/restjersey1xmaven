@@ -8,11 +8,13 @@
 	<name>RestJerseyMaven Maven Webapp</name>
 
 	<properties>
+	   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.version>4.12</junit.version>
 		<asm.version>3.1</asm.version>
-		<jersey.version>1.17.1</jersey.version>
+		<jersey.version>1.19</jersey.version>
 		<jsr311-api.version>1.1.1</jsr311-api.version>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
