@@ -4,6 +4,7 @@
 package org.estilolibre.demo.blog.restws;
 
 import java.util.Date;
+import java.util.TimeZone;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -63,6 +64,8 @@ public class UserInfo {
 		if (id.equals(666l)) {
 			return null;
 		}
+
+		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 		final User user = new User();
 		user.setId(id);
 		user.setFirstName("Tim");

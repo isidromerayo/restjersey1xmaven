@@ -50,7 +50,7 @@ public class UserServiceTestUsingJerseyFrameworkTest extends JerseyTest {
 		assertEquals("12", json.get("id"));
 		assertEquals("Tim", json.get("firstName"));
 		assertEquals("Tester", json.get("lastName"));
-		assertEquals("1970-01-16T07:56:49.871+01:00", json.get("birthday"));
+		assertEquals("1970-01-16T06:56:49.871Z", json.get("birthday"));
 	}
 
 	@Test(expected = UniformInterfaceException.class)
