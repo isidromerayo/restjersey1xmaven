@@ -8,3 +8,8 @@ http://www.javacodegeeks.com/2013/11/restful-web-services-with-java.html
 Test it: http://localhost:8080/RestJersey/rest/UserInfoService/name/Pavithra
 
 http://www.hascode.com/2011/09/rest-assured-vs-jersey-test-framework-testing-your-restful-web-services/
+
+Travis CI
+---------
+
+https://travis-ci.org/isidromerayo/restjersey1xmaven.svg?branch=master
