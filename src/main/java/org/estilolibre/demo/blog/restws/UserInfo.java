@@ -15,6 +15,8 @@ import javax.ws.rs.core.MediaType;
 
 import org.estilolibre.demo.blog.entity.User;
 
+import com.sun.jersey.api.NotFoundException;
+
 /**
  * @author isidromerayo
  *
@@ -46,8 +48,12 @@ public class UserInfo {
 	@Produces(MediaType.TEXT_XML)
 	public String userAge(@PathParam("j") int j) {
 
-		int age = j;
-		return "<User>" + "<Age>" + age + "</Age>" + "</User>";
+		try {
+			int age = j;
+			return "<User>" + "<Age>" + age + "</Age>" + "</User>";
+		} catch (Exception e) {
+			throw new NotFoundException(e.getMessage());
+		}
 	}
 
 	@GET

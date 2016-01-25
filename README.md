@@ -9,6 +9,8 @@ Test it: http://localhost:8080/RestJersey/rest/UserInfoService/name/Pavithra
 
 http://www.hascode.com/2011/09/rest-assured-vs-jersey-test-framework-testing-your-restful-web-services/
 
+https://javaposts.wordpress.com/2012/01/14/maven-rest-jersey-eclipse-tutorial/
+
 Travis CI
 ---------
 

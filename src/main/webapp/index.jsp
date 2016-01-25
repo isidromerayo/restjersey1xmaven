@@ -23,5 +23,11 @@ Test it
         </form>
     </li>
 </ul>
+
+<h3>Employee WS</h3>
+<ul>
+    <li><a href="http://localhost:8080/RestJersey/rest/employee">all employees</a></li>
+    <li><a href="http://localhost:8080/RestJersey/rest/employee/1">employee with id "1"</a></li>
+</ul>
 </body>
 </html>

@@ -41,7 +41,7 @@ public class UserServiceTestUsingJerseyFrameworkTest extends JerseyTest {
 	}
 
 	@Test
-	public void testUserFetchesSuccess() throws JSONException,
+	public void userFetchesSuccessWhenUserExits() throws JSONException,
 			URISyntaxException {
 
 		JSONObject json = resource().path(
@@ -54,14 +54,14 @@ public class UserServiceTestUsingJerseyFrameworkTest extends JerseyTest {
 	}
 
 	@Test(expected = UniformInterfaceException.class)
-	public void testUserNotFound() {
+	public void userNotFoundWhenUserNotExists() {
 
 		resource().path(LITERAL_URI_USER_INFO_SERVICE + " id/666").get(
 				JSONObject.class);
 	}
 
 	@Test
-	public void testUserAgeFetchesSuccessStringXML() {
+	public void userAgeFetchesSuccessStringXMLWhenCallWithInteger() {
 		String expected = "<User><Age>12</Age></User>";
 		String result = resource().path(
 				LITERAL_URI_USER_INFO_SERVICE + "age/12").get(String.class);
