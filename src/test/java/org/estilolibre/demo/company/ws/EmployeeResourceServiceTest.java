@@ -3,11 +3,19 @@ package org.estilolibre.demo.company.ws;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+import java.util.Collection;
+import java.util.List;
+
+import javax.ws.rs.core.MediaType;
+
 import org.estilolibre.demo.company.db.DB;
 import org.estilolibre.demo.company.model.Employee;
 import org.junit.Test;
 
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.GenericType;
 import com.sun.jersey.api.client.UniformInterfaceException;
+import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.core.ClassNamesResourceConfig;
 import com.sun.jersey.api.core.DefaultResourceConfig;
 import com.sun.jersey.spi.container.servlet.WebComponent;
@@ -51,9 +59,35 @@ public class EmployeeResourceServiceTest extends JerseyTest {
 	}
 
 	@Test
-	public final void shouldBeReturnAllEmployeesWhenCallToResourceEmployee() {
+	public final void shouldBeReturnResponseXMLFormat() {
+		WebResource ws = resource().path(LITERAL_URI_EMPLOYEE_SERVICE + "/1");
+		ClientResponse response = ws.accept(MediaType.APPLICATION_XML).get(
+				ClientResponse.class);
+		assertEquals(200, response.getStatus());
+	}
+
+	@Test
+	public final void shouldBeReturnResponseJSONFormat() {
+		WebResource ws = resource().path(LITERAL_URI_EMPLOYEE_SERVICE + "/1");
+		ClientResponse response = ws.accept(MediaType.APPLICATION_JSON).get(
+				ClientResponse.class);
+		assertEquals(200, response.getStatus());
+	}
+
+	@Test
+	public final void shouldBeReturnAllEmployeesAsStringWhenCallToResourceEmployee() {
 		String result = resource().path(LITERAL_URI_EMPLOYEE_SERVICE).get(
 				String.class);
 		assertNotNull(result);
+	}
+
+	@Test
+	public final void shouldBeReturnAllEmployeesWhenCallToResourceEmployee() {
+		GenericType<Collection<Employee>> genericType = new GenericType<Collection<Employee>>() {
+		};
+		List<Employee> wsResult = (List<Employee>) resource()
+				.path(LITERAL_URI_EMPLOYEE_SERVICE)
+				.accept(MediaType.APPLICATION_XML).get(genericType);
+		assertEquals(2, wsResult.size());
 	}
 }
