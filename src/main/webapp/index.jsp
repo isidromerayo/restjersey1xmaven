@@ -10,14 +10,14 @@
 <h2>Demo REST Jersey Maven</h2>
 <h3>@PathParam</h3>
 <ul>
-    <li>Call to UserInfoService with name (Pavithra): <a href="http://localhost:8080/RestJersey/rest/UserInfoService/name/Pavithra">http://localhost:8080/RestJersey/rest/UserInfoService/name/Pavithra</a> </li>
-    <li>Call to UserInfoService with age (33): <a href="http://localhost:8080/RestJersey/rest/UserInfoService/age/33">http://localhost:8080/RestJersey/rest/UserInfoService/age/33</a>  </li>
+    <li>Call to UserInfoService with name (Pavithra): <a href="http://localhost:8080<%= request.getContextPath() %>/rest/UserInfoService/name/Pavithra">UserInfoService name Pavithra</a> </li>
+    <li>Call to UserInfoService with age (33): <a href="http://localhost:8080<%= request.getContextPath() %>/rest/UserInfoService/age/33">UserInfoService age 33</a>  </li>
 </ul>
 <h3>@QueryParam</h3>
 Test it
 <ul>    
     <li>
-        <form action="http://localhost:8080/RestJersey/rest/UserInfoService/username/" method="GET">
+        <form action="http://localhost:8080<%= request.getContextPath() %>/rest/UserInfoService/username/" method="GET">
         Username:  <input type="text" name="username">
         <input type="submit" value="Submit">
         </form>
@@ -26,8 +26,8 @@ Test it
 
 <h3>Employee WS</h3>
 <ul>
-    <li><a href="http://localhost:8080/RestJersey/rest/employee">all employees</a></li>
-    <li><a href="http://localhost:8080/RestJersey/rest/employee/1">employee with id "1"</a></li>
+    <li><a href="http://localhost:8080<%= request.getContextPath() %>/rest/employee">all employees</a></li>
+    <li><a href="http://localhost:8080<%= request.getContextPath() %>/rest/employee/1">employee with id "1"</a></li>
 </ul>
 </body>
 </html>
