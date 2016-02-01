@@ -22,7 +22,31 @@ $ mvn verify -P integration-test,tomcat-7
 $ mvn verify -P integration-test,jetty-9
 
 
+Run application server
+----------------------
+
+$ mvn tomcat:run
+
+http://localhost:8080/RestJerseyMaven
+
+$ mvn jetty:run
+
+http://localhost:8080/
+
 Travis CI
 ---------
 
 Status: [![Build Status](https://travis-ci.org/isidromerayo/restjersey1xmaven.svg?branch=master)](https://travis-ci.org/isidromerayo/restjersey1xmaven)
+
+References
+----------
+
+http://cupofjava.de/blog/2013/02/05/integration-tests-with-maven-and-tomcat/
+
+http://blog.code-cop.org/2015/04/maven-integration-tests-extra-folder.html
+
+https://blog.codecentric.de/en/2012/05/writing-lightweight-rest-integration-tests-with-the-jersey-test-framework/
+
+http://www.disasterarea.co.uk/blog/integration-tests-with-selenium-and-tomcat7-maven-plugin/
+
+https://cooldevstuff.wordpress.com/category/integration-testing-using-maven-jetty-plugin-2/
