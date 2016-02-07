@@ -45,7 +45,6 @@ public class DummyIT {
 	}
 
 	@Test
-	// @Ignore
 	public void applicationIsUpAndJSPPageResponse() throws IOException {
 		// given
 		HttpGet httpget = new HttpGet(URL + "/index.jsp");

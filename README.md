@@ -12,8 +12,8 @@ http://www.hascode.com/2011/09/rest-assured-vs-jersey-test-framework-testing-you
 https://javaposts.wordpress.com/2012/01/14/maven-rest-jersey-eclipse-tutorial/
 
 
-Integration test
-----------------
+Integration test (with Application Server profiles) 
+---------------------------------------------------
 
 To run on Tomcat 7 or Jetty 9.x
 
@@ -45,8 +45,16 @@ http://cupofjava.de/blog/2013/02/05/integration-tests-with-maven-and-tomcat/
 
 http://blog.code-cop.org/2015/04/maven-integration-tests-extra-folder.html
 
+https://javaposts.wordpress.com/2012/01/14/maven-rest-jersey-eclipse-tutorial/
+
 https://blog.codecentric.de/en/2012/05/writing-lightweight-rest-integration-tests-with-the-jersey-test-framework/
 
 http://www.disasterarea.co.uk/blog/integration-tests-with-selenium-and-tomcat7-maven-plugin/
 
 https://cooldevstuff.wordpress.com/category/integration-testing-using-maven-jetty-plugin-2/
+
+http://mjlex.blogspot.de/2012/04/writing-lightweight-rest-integration.html
+
+http://www.petrikainulainen.net/programming/maven/integration-testing-with-maven/
+
+http://arquillian.org/guides/getting_started/
